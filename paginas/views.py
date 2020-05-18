@@ -14,8 +14,4 @@ def funcionarios(request):
 
     if request.method == 'GET':
         ultimos10 = Apontamento.objects.order_by(-Apontamento.id)[:10]
-        # print(ultimos10)
-        # j = jsonify(funcionarios=[i.serializar for i in ultimos10])
-        # print(j)
-        # return j
         return JsonResponse({'funcionarios': [i.serializar for i in ultimos10]}, safe=False)
