@@ -4,6 +4,6 @@ from .views import inicio, funcionarios
 
 
 urlpatterns = [
-    path('', inicio)
+    path('', inicio),
     path('funcionarios', funcionarios)
 ]
