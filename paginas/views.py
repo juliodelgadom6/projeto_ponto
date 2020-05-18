@@ -14,5 +14,5 @@ def funcionarios(request):
         return render(request, 'index.html', {})
 
     if request.method == 'GET':
-        ultimos10 = Apontamento.objects.order_by(-Apontamento.id)[:10]
+        ultimos10 = Apontamento.objects.order_by('-id')[:10]
         return JsonResponse({'funcionarios': [i.serializar for i in ultimos10]}, safe=False)
