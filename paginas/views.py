@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from .models import Apontamento
 
+from django.http import JsonResponse
+
 # Create your views here.
 def inicio(request):
     return render(request, 'index.html', {})
