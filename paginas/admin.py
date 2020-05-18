@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Apontamentos
+from .models import Apontamento
 
 
-admin.site.register(Apontamentos)
+admin.site.register(Apontamento)
